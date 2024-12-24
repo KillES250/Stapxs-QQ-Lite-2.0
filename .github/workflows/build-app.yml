@@ -159,10 +159,10 @@ jobs:
               run: yarn build:win
               env:
                   GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-            # 构建 electron 版本（Linux）
-            - name: Build Electron (Linux)
+            # 构建 electron 版本（Android）
+            - name: Build Electron (Android)
               if: matrix.os == 'ubuntu-latest'
-              run: yarn build:linux
+              run: yarn build:android
               env:
                   GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
